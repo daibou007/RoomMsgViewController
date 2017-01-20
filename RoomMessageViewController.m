@@ -133,6 +133,7 @@
     [self removeObserver];
     [self stopPlayer];
     [[IMService instance] leaveRoom:self.roomID];
+    [[RoomOutbox instance] clearMsgs];
     
     NSNotification* notification = [[NSNotification alloc] initWithName:CLEAR_PEER_NEW_MESSAGE
                                                                  object:[NSNumber numberWithLongLong:self.roomID]

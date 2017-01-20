@@ -36,6 +36,12 @@
     return self;
 }
 
+- (void)clearMsgs{
+    if (self.msgs) {
+        [self.msgs removeAllObjects];
+    }
+}
+
 - (void)sendMessage:(IMessage*)msg{
     RoomMessage *im = [[RoomMessage alloc] init];
     im.sender = msg.sender;

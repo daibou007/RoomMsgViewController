@@ -17,4 +17,6 @@
 
 +(RoomOutbox*)instance;
 
+- (void)clearMsgs;
+
 @end
